@@ -23,6 +23,18 @@ module.exports={
     output:{
         filename:'[name].js?',
         path:path.resolve(__dirname,'./app/dist')
+    },
+    module:{
+        rules:[
+            {
+                test:/\.css$/,
+                use:'css-loader'
+            },
+            {
+                test:/\.ts$/,
+                use:'ts-loader'
+            }
+        ]
     }
 }
 console.log('aaaa');
