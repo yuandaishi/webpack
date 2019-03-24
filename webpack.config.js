@@ -4,7 +4,9 @@ const glob=require('glob');
 
 const config = {
     entry: {
-        js:__dirname+'/app/public/app/js/index/a.js',
+        a:path.resolve(__dirname,'./app/public/js/entry/a.js'),
+        b:path.resolve(__dirname,'./app/public/js/entry/b.js'),
+        c:path.resolve(__dirname,'./app/public/js/entry/c.js'),
     }
   };
 
@@ -19,8 +21,9 @@ module.exports={
     // },
     entry:config.entry,
     output:{
-        filenames:'a.js',
-        path:__dirname+'/app'
+        filename:'[name].js?',
+        path:path.resolve(__dirname,'./app/dist')
     }
 }
 console.log('aaaa');
+console.log(__dirname);
