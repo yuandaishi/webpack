@@ -35,7 +35,7 @@ module.exports={
                 use:'ts-loader'
             }
         ]
-    }
+    },
 }
 console.log('aaaa');
 console.log(__dirname);
