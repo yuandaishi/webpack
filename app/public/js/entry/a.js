@@ -1,6 +1,6 @@
 import index from './../modules/index/index.js';
 import b from './b.js';
-import vue from 'vue';
+import Vue from 'vue';
 
 var Vapp=new Vue({
     el:'#app',
@@ -22,3 +22,4 @@ var Vapp=new Vue({
     }
 })
 
+console.log(Vapp);

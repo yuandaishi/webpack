@@ -33,9 +33,21 @@ module.exports={
             {
                 test:/\.ts$/,
                 use:'ts-loader'
-            }
+            },
+            // {
+            //     test:/\.js$/,
+            //     use:'babel-loader'
+            // }
         ]
     },
+    resolve:{
+        alias:{
+            'vue$':'vue/dist/vue.esm.js'//import xxx from 'vue'的时候，重定向指向位置
+        }
+    },
+    externals:{
+        vue:'Vue',//打包时，忽略import中的vue模块，因为忽略了，所以在需要的页面要通过script标签引入
+    }
 }
 console.log('aaaa');
 console.log(__dirname);
