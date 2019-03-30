@@ -1,6 +1,9 @@
 var webpack = require('webpack');
 const path=require('path');
 const glob=require('glob');
+const HtmlWebpackPlugin=require('html-webpack-plugin');
+const CleanWabpackPlugin=require('clean-webpack-plugin');
+
 
 const config = {
     entry: {
@@ -26,6 +29,13 @@ module.exports={
         // publicPath: 'dist/',//静态文件的路径，不设置的话，找不到（不是通过import引入的文件，如果是通过import引入的依赖，则只要第一个文件的路径正确即可，其他文件会被打包到这个文件里）
         //写在这里的话，则全部的静态文件都会相对这个路径
     },
+    plugins:[
+        new CleanWabpackPlugin(),
+        new HtmlWebpackPlugin({
+            title:'测试HtmlWebpackPlugin插件',
+            template:'./app/index.html'
+        })
+    ],
     module:{
         rules:[
             {
@@ -38,7 +48,7 @@ module.exports={
                 use:'ts-loader'//除了loader之外，还应该在这个项目下安装依赖typescript
             },
             {
-                test:/\.html$/,
+                test:/(\.html)$/,
                 use:'html-loader'//会把html变成一个字符串返回
             },
             {
@@ -57,6 +67,15 @@ module.exports={
                         }
                     }
                 ]
+            },
+            {
+                test:/\.yuan.html$/,
+                use:{
+                    loader:path.resolve(__dirname, './app/public/js/loader/yuan-loader.js'),
+                    options:{
+                        name:'测试使用'
+                    }
+                },
             }
         ]
     },
@@ -69,5 +88,5 @@ module.exports={
         vue:'Vue',//打包时，忽略import中的vue模块，因为忽略了，所以在需要的页面要通过script标签引入
     }
 }
-// console.log('aaaa');
-// console.log(__dirname);
+console.log('aaaa');
+console.log(__dirname);
