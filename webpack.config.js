@@ -73,7 +73,16 @@ module.exports={
                 use:{
                     loader:path.resolve(__dirname, './app/public/js/loader/yuan-loader.js'),
                     options:{
-                        name:'测试使用'
+                        name:'测试使用啊哈哈哈哈哈'
+                    }
+                },
+            },
+            {
+                test:/\.docx$/,
+                use:{
+                    loader:path.resolve(__dirname, './app/public/js/loader-word/loader-word.js'),
+                    options:{
+                        name:'测试使用啊哈哈哈哈哈'
                     }
                 },
             }
