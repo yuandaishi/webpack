@@ -1,0 +1,15 @@
+$width:50px;
+.prompt{
+    width: $width;
+    color: red;
+}
+.box_1{
+    width: 500px;
+    height: 500px;
+    background: url(./../img/1.jpg);
+}
+.box_2{
+    width: 500px;
+    height: 500px;
+    background: url(./../img/2.jpg);
+}

@@ -1,0 +1,11 @@
+{
+  "name": "loader-yuan",
+  "version": "1.0.0",
+  "description": "尝试写一个loader",
+  "main": "loader-yuan.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
