@@ -1,4 +1,5 @@
 //import schemaUtils_1 from 'loader-utils';//不支持import写法
+//在这个loader之前，html文件已经被html-loader处理过一次了
 const loaderUtils=require('loader-utils');
 const schemaUtils =require('schema-utils');
 module.exports=function(source) {//只能传入一个参数，这个参数是文件资源的字符串
