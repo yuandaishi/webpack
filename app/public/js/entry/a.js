@@ -1,12 +1,14 @@
 import index from './../modules/index/index.js';
 import b from './b.js';
-import Vue from 'vue';
+// import Vue from 'vue';
 import foo from './test.ts';
 import html from './html/test.html';
 import style from './css/style.css';
 import style_scss from './scss/style.scss';
 import loader_yuan from './yuan/loader.yuan.html';
 //import loader_word from './word/a.docx';
+
+console.log(Vue);
 
 var Vapp=new Vue({
     el:'#app',
